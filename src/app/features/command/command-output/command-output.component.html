@@ -1,0 +1,20 @@
+<h3 class="h4 flex-box">
+  <span class="flex-span">Redis Responses</span>
+  <button (click)="clear()" title="Clear Redis Responses" class="flex-button">
+    <i class="h7 material-icons">
+      clear
+    </i>
+  </button>
+</h3>
+
+<div class="flex-fill scroll-box-container">
+  <div class="scroll-box" #scrollable [scrollTop]="scrollable.scrollHeight">
+    <ul>
+      <li *ngFor="let output of commandsOutput" [class]="output.type" [class.text-danger]="!output.valid">
+        <span *ngIf="!output.valid">!</span>
+        <span>{{ output.type | uppercase }}:</span>
+        <span class="run-command">{{ output.output }}</span>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+ul {
+  list-style: none;
+  padding: 0.5rem;
+
+  li {
+    &.command {
+      color: #736767;
+      font-size: 0.7rem;
+      padding-top: 0.6rem;
+
+      span {
+        font-style: italic;
+      }
+    }
+
+    &.response {
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid #ccc;
+
+      .run-command {
+        font-weight: bold;
+      }
+    }
+
+    span {
+      display: inline-block;
+      padding: 0 0.25rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.scroll-box-container {
+  background: white;
+  border: 1px solid #ccc;
+  @media (min-width: 768px) and (max-width: 1023px) {
+    min-height: 200px;
+  }
+  .scroll-box {
+    padding-bottom: 2rem !important;
+  }
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .flex-button {
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+  }
+
+  button:focus {
+    outline: 0;
+  }
+}
